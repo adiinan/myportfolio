@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+nav {
+    background: orange;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    display: flex;
+    position:relative;
+    right:-310px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color:white;
+}
+
+section {
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+.home-section {
+    background-color:black;
+    color:white;
+    display: flex;
+}
+
+.projects-section{
+    background-color: black;
+}
+
+h2 {
+    text-align:center;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.project-card {
+    background-color:white;
+    padding: 20px;
+    border: 6px solid goldenrod;
+    border-radius: 190px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, 
+.contact-section textarea {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 18px;
+}
+
+.contact-section button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    border: none;
+    background:blue;
+    color:white;
+    font-size: 20px;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-section button:hover {
+    background:blue;
+}
+
+.end {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:grey;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color:blue;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+#myimg {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: block;
+        text-align: center;
+        position: relative;
+        right: 0;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #myimg {
+        position: relative;
+        left: 0;
+        top: 10px;
+    }
+
+    h3.underline {
+        font-size: 1.2em;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+
+    .contact-section form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    nav .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex; 
+        flex-direction: row; 
+    }
+    
+    .nav-links.active {
+        display: flex; 
+        flex-direction: column; 
+    }
+    
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
